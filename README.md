@@ -11,6 +11,10 @@ roslaunch orange_mapping lio_sam_slam.launch
 roslaunch tsukuba2022 start_sim.launch
 rosservice call /lio_sam/save_map 1.0 "/Downloads/LOAM/"
 ```
+If the map drifts frequently, run the following command instead.
+```
+roslaunch orange_mapping lio_sam_slam.launch rm_imu_acc:=true
+```
 - From rosbag
 ```
 roslaunch orange_mapping lio_sam_slam.launch create_map_from_rosbag:=true
