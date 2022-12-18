@@ -8,7 +8,7 @@ This package provides slam functionality for the orange robot.
 - From gazebo simulation
 ```
 roslaunch orange_mapping lio_sam_slam.launch
-roslaunch tsukuba2022 start_sim.launch
+roslaunch tsukuba2022 start_sim.launch use_ekf:=false
 rosservice call /lio_sam/save_map 1.0 "/Downloads/LOAM/"
 ```
 If the map drifts frequently, run the following command instead.
